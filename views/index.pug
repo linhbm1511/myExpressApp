@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  - var myOwnstaff = JSON.parse(mystaff)
+  table(border='1')
+    tr
+     th Id
+     th Name
+     th Phòng ban
+    each staff in myOwnstaff
+      tr
+        td= staff.staff_id
+        td= staff.name
+        td= staff.DEPART_ID
